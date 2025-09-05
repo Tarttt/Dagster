@@ -3,8 +3,6 @@ import shutil
 import time
 from datetime import datetime, timedelta
 from concurrent.futures import ProcessPoolExecutor
-import logging
-from config import logging_setup
 import urllib.request
 from minio import Minio
 
@@ -52,7 +50,7 @@ destinations = [r"box2\Run_Image",
 
 directories = zip(source_folders, destinations)
 last_scan = 'last_scan.txt'
-logging_setup()
+
 
 #%%
 
